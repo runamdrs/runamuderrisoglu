@@ -1,6 +1,7 @@
 import { chapters } from "./chapters";
 import { yedigollerChapters } from "./yedigollerChapters";
 import { ekChapters } from "./ekChapters";
+import { tennisChapters } from "./tennisChapters";
 import { organChapters } from "./organChapters";
 
 // Every project that has a full case study lives here. The key is the
@@ -29,5 +30,11 @@ export const projects = {
     title: ["Predicting Transplant", "Outcomes with Data"],
     kicker: "Machine Learning Case Study",
     chapters: organChapters,
+  },
+  "tennis-tournament": {
+    eyebrow: "Lenoir-Rhyne University · 2025",
+    title: ["A Tournament System", "Built by Its Captain"],
+    kicker: "C++ Final Project Case Study",
+    chapters: tennisChapters,
   },
 };

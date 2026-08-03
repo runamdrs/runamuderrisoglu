@@ -148,6 +148,17 @@ const projects = [
     tags: ["Arduino", "Embedded Systems", "Sensors", "C/C++"],
   },
 
+  {
+    id: "tennis-tournament",
+    number: "05",
+    type: "Software Engineering • C++",
+    year: "2025",
+    title: "A Tournament System Built by Its Captain",
+    description:
+      "My CSC 250 final project: a menu-driven tournament management system in C++. It registers players, schedules matches, parses scores, sorts the field with hand-written algorithms, and generates knockout brackets recursively, built on five classes I designed from a UML diagram.",
+    tags: ["C++", "Object-Oriented Programming", "Algorithms", "Exception Handling"],
+  },
+
   // ADD FUTURE PROJECTS HERE
   //
   // {
