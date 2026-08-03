@@ -396,12 +396,12 @@ export default function Home({ onOpenProject }) {
             What I work with
           </h2>
 
-          <div className="mt-16 grid gap-10 md:grid-cols-2 xl:grid-cols-4">
+          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
 
             {skills.map((skill) => (
               <div
                 key={skill.group}
-                className="rounded-3xl border border-slate-800 bg-slate-900/50 p-8"
+                className="rounded-3xl border border-slate-800 bg-slate-900/50 p-6"
               >
                 <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
                   {skill.group}
@@ -411,7 +411,7 @@ export default function Home({ onOpenProject }) {
                   {skill.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300"
+                      className="rounded-full border border-slate-700 px-3 py-1.5 text-sm text-slate-300"
                     >
                       {item}
                     </span>
