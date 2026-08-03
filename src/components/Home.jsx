@@ -45,7 +45,7 @@ const experiences = [
 const athletics = [
   {
     period: "Aug 2023 - Present",
-    role: "Women's Tennis Team, Captain",
+    role: "LR Women's Tennis Team Captain",
     org: "Lenoir-Rhyne University",
     bullets: [
       "Academic All-America, Second Team: among the top 12 players in the nation when combining academic and athletic performance.",
@@ -122,7 +122,7 @@ const projects = [
     year: "2026",
     title: "When Code Stops Being the Bottleneck",
     description:
-      "My software engineering internship at Talent-Ray. I worked on the Test Orchestrator, the automated testing system that decides whether AI-written code is actually ready to ship.",
+      "During my software engineering internship at Talent-Ray, I worked on the Test Orchestrator, the automated testing system that decides whether AI-written code is actually ready to ship.",
     tags: ["Artificial Intelligence", "Software Engineering", "Testing"],
   },
 
@@ -164,7 +164,7 @@ const projects = [
     number: "05",
     type: "Software Engineering • C++",
     year: "2025",
-    title: "A Tournament System Built by Its Captain",
+    title: "A Tournament System Built by a Tennis Team Captain",
     description:
       "My CSC 250 final project: a menu-driven tournament management system in C++. It registers players, schedules matches, parses scores, sorts the field with hand-written algorithms, and generates knockout brackets recursively, built on five classes I designed from a UML diagram.",
     tags: ["C++", "Object-Oriented Programming", "Algorithms", "Exception Handling"],
@@ -199,8 +199,8 @@ export default function Home({ onOpenProject }) {
 
         <div className="relative z-10 mx-auto w-full max-w-7xl text-center">
 
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-400">
-            Runa Müderrisoğlu
+          <p className="text-sm font-semibold tracking-[0.35em] text-blue-400">
+            RUNA MÜDERRİSOĞLU
           </p>
 
           <h1 className="mx-auto mt-8 max-w-5xl text-6xl font-bold leading-[1.05] md:text-8xl">
@@ -215,8 +215,8 @@ export default function Home({ onOpenProject }) {
 
           <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-slate-400">
             Computer Science major with an Engineering Physics minor at
-            Lenoir-Rhyne University. 4.0 GPA, captain of the women's tennis
-            team, and Academic All-America honoree. Interested in Artificial
+            Lenoir-Rhyne University. 4.0 GPA, captain of the LR Women's
+            Tennis Team, and Academic All-America honoree. Interested in Artificial
             Intelligence, Robotics, and Biomedical Engineering.
           </p>
 

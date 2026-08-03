@@ -33,7 +33,7 @@ export const projects = {
   },
   "tennis-tournament": {
     eyebrow: "Lenoir-Rhyne University · 2025",
-    title: ["A Tournament System", "Built by Its Captain"],
+    title: ["A Tournament System", "Built by a Tennis Team Captain"],
     kicker: "C++ Final Project Case Study",
     chapters: tennisChapters,
   },

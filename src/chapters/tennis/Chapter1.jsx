@@ -14,7 +14,7 @@ export default function Chapter1() {
           <p className="mb-6 text-lg leading-8 text-slate-700">
             For my CSC 250 final project at Lenoir-Rhyne University, I built a
             complete tournament management system in C++. The topic was an easy
-            choice: as captain of the women's tennis team, I have lived inside
+            choice: as captain of the LR Women's Tennis Team, I have lived inside
             tournaments for years. This time I got to build the machinery that
             runs one.
           </p>
