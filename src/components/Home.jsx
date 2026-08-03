@@ -101,6 +101,17 @@ const skills = [
       "Eclipse",
     ],
   },
+  {
+    group: "Soft Skills",
+    items: [
+      "Hardworking",
+      "Team Player",
+      "Leadership",
+      "Communication",
+      "Adaptability",
+      "Problem Solving",
+    ],
+  },
 ];
 
 const projects = [
