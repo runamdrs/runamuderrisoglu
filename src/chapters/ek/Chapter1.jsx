@@ -5,7 +5,7 @@ export default function Chapter1() {
     <ChapterLayout
       number="01"
       title="Overview"
-      subtitle="Learning electronics by building — four interactive systems on an Arduino Leonardo."
+      subtitle="Learning electronics by building four interactive systems on an Arduino Leonardo."
     >
       <div className="grid gap-12 lg:grid-cols-2">
 
@@ -21,7 +21,7 @@ export default function Chapter1() {
           <p className="mb-6 text-lg leading-8 text-slate-700">
             Over the internship I designed and built four complete systems
             around the Arduino Leonardo. Each one combined sensors, displays,
-            and actuators into something interactive — a car distance sensor,
+            and actuators into something interactive: a car distance sensor,
             a plant care monitor, a countdown machine, and a password-protected
             smart home controller.
           </p>
@@ -74,6 +74,15 @@ export default function Chapter1() {
               </li>
             ))}
           </ul>
+
+          <a
+            href="https://github.com/runamdrs/arduino-leonardo-projects"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-8 block border-t border-slate-200 pt-6 text-sm font-semibold text-blue-600 transition hover:text-blue-500"
+          >
+            View the code on GitHub →
+          </a>
 
         </div>
 

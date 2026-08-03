@@ -13,8 +13,8 @@ export default function Chapter4() {
 
           <p className="mb-6 text-lg leading-8 text-slate-700">
             The third system was a countdown timer you controlled with your
-            hands. Turning a potentiometer dial set the countdown duration —
-            anywhere up to a full hour — and the system translated the dial's
+            hands. Turning a potentiometer dial set the countdown duration,
+            anywhere up to a full hour, and the system translated the dial's
             analog position into minutes and seconds.
           </p>
 

@@ -1,8 +1,8 @@
 import Chapter1 from "../chapters/yedigoller/Chapter1";
 import Chapter2 from "../chapters/yedigoller/Chapter2";
 
-// TODO: uncomment these once the chapter files are written —
-// importing them now breaks the build because the files don't exist yet.
+// TODO: uncomment these once the chapter files are written.
+// Importing them now breaks the build because the files don't exist yet.
 // import Chapter3 from "../chapters/yedigoller/Chapter3";
 // import Chapter4 from "../chapters/yedigoller/Chapter4";
 // import Chapter5 from "../chapters/yedigoller/Chapter5";

@@ -27,8 +27,8 @@ export default function Chapter3() {
 
           <p className="text-lg leading-8 text-slate-700">
             This project was my first time turning raw analog readings into
-            decisions. I had to experiment to find sensible thresholds — what
-            counts as "too dry" or "too dark" — and make sure the alerts
+            decisions. I had to experiment to find sensible thresholds for
+            what counts as "too dry" or "too dark," and make sure the alerts
             triggered reliably without false alarms.
           </p>
 

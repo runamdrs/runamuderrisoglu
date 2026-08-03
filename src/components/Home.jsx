@@ -128,7 +128,7 @@ const projects = [
     year: "2025",
     title: "Four Machines on One Microcontroller",
     description:
-      "My engineering internship at E & K Arge Engineering. I built four interactive systems on an Arduino Leonardo — a car distance sensor with color detection, a plant care monitor, a Bluetooth countdown machine, and a password-protected smart home controller.",
+      "My engineering internship at E & K Arge Engineering. I built four interactive systems on an Arduino Leonardo: a car distance sensor with color detection, a plant care monitor, a Bluetooth countdown machine, and a password-protected smart home controller.",
     tags: ["Arduino", "Embedded Systems", "Sensors", "C/C++"],
   },
 

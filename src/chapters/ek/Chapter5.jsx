@@ -5,7 +5,7 @@ export default function Chapter5() {
     <ChapterLayout
       number="05"
       title="House Properties App"
-      subtitle="A password-protected smart home controller — the project that brought everything together."
+      subtitle="A password-protected smart home controller, the project that brought everything together."
     >
       <div className="grid gap-12 lg:grid-cols-2">
 
@@ -26,8 +26,9 @@ export default function Chapter5() {
           </p>
 
           <p className="text-lg leading-8 text-slate-700">
-            This project pulled together everything from the earlier ones —
-            sensors, displays, and user input — and added two kinds of motors.
+            This project pulled together everything from the earlier ones,
+            from sensors and displays to user input, and added two kinds of
+            motors.
             Coordinating all of it behind one keypad menu was the closest I
             came that summer to building a real product.
           </p>
