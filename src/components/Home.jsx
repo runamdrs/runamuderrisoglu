@@ -129,20 +129,20 @@ export default function Home({ onOpenProject }) {
 
       {/* HERO */}
 
-      <section className="relative flex min-h-[85vh] items-center overflow-hidden px-8">
+      <section className="relative flex min-h-[85vh] items-center overflow-hidden px-8 pb-28">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-700/20 via-slate-950 to-slate-950" />
 
         <div className="absolute -left-20 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
 
         <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl" />
 
-        <div className="relative z-10 mx-auto w-full max-w-7xl">
+        <div className="relative z-10 mx-auto w-full max-w-7xl text-center">
 
           <p className="text-sm font-semibold uppercase tracking-[0.35em] text-blue-400">
             Runa Müderrisoğlu
           </p>
 
-          <h1 className="mt-8 max-w-5xl text-6xl font-bold leading-[1.05] md:text-8xl">
+          <h1 className="mx-auto mt-8 max-w-5xl text-6xl font-bold leading-[1.05] md:text-8xl">
             Building intelligent
             <br />
             systems through
@@ -152,14 +152,14 @@ export default function Home({ onOpenProject }) {
             </span>
           </h1>
 
-          <p className="mt-10 max-w-2xl text-xl leading-9 text-slate-400">
+          <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-slate-400">
             Computer Science major with an Engineering Physics minor at
             Lenoir-Rhyne University. 4.0 GPA, captain of the women's tennis
             team, and Academic All-America honoree. Interested in Artificial
             Intelligence, Robotics, and Biomedical Engineering.
           </p>
 
-          <div className="mt-12 flex items-center gap-6">
+          <div className="mt-12 flex items-center justify-center gap-6">
 
             <a
               href="#projects"
