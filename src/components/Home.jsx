@@ -79,6 +79,7 @@ const skills = [
       "Claude Code",
       "Prompt Engineering",
       "End-to-End Testing",
+      "Machine Learning",
     ],
   },
   {
@@ -88,6 +89,10 @@ const skills = [
   {
     group: "Data & Tools",
     items: [
+      "scikit-learn",
+      "pandas",
+      "NumPy",
+      "Matplotlib",
       "Tableau",
       "Git & Git Worktrees",
       "Microsoft Graph API",
@@ -122,8 +127,19 @@ const projects = [
   },
 
   {
-    id: "ek-arduino",
+    id: "organ-matching",
     number: "03",
+    type: "Machine Learning • Healthcare",
+    year: "2025",
+    title: "Predicting Transplant Outcomes with Data",
+    description:
+      "A Random Forest model that estimates whether a donor and recipient are likely to be a successful match. Built for CSC 280, including the simulated dataset behind it and an honest account of what a model trained on simulated outcomes can and cannot claim.",
+    tags: ["Python", "scikit-learn", "Machine Learning", "Data Science"],
+  },
+
+  {
+    id: "ek-arduino",
+    number: "04",
     type: "Embedded Systems • Electronics",
     year: "2025",
     title: "Four Machines on One Microcontroller",
