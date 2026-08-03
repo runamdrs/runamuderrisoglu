@@ -2,7 +2,7 @@ import Footer from "./Footer";
 
 const experiences = [
   {
-    period: "May – Aug 2026",
+    period: "May - Aug 2026",
     role: "Software Engineering Intern",
     org: "Talent-Ray",
     bullets: [
@@ -13,7 +13,7 @@ const experiences = [
     projectId: "talent-ray",
   },
   {
-    period: "Aug 2025 – Present",
+    period: "Aug 2025 - Present",
     role: "Tutor & Academic Coach",
     org: "Lenoir-Rhyne University",
     bullets: [
@@ -22,7 +22,7 @@ const experiences = [
     ],
   },
   {
-    period: "Jun – Jul 2025",
+    period: "Jun - Jul 2025",
     role: "Engineering Intern",
     org: "E & K Arge Engineering",
     bullets: [
@@ -33,7 +33,7 @@ const experiences = [
     projectId: "ek-arduino",
   },
   {
-    period: "Jul – Aug 2024",
+    period: "Jul - Aug 2024",
     role: "Chocolate Engineer",
     org: "ZD Chocolates",
     bullets: [
@@ -44,7 +44,7 @@ const experiences = [
 
 const athletics = [
   {
-    period: "Aug 2023 – Present",
+    period: "Aug 2023 - Present",
     role: "Women's Tennis Team, Captain",
     org: "Lenoir-Rhyne University",
     bullets: [
@@ -275,7 +275,7 @@ export default function Home({ onOpenProject }) {
           <div className="mt-16 grid gap-8 border-t border-slate-800 pt-12 md:grid-cols-[220px_1fr]">
 
             <div className="text-slate-500">
-              Aug 2023 – Present
+              Aug 2023 - Present
             </div>
 
             <div>

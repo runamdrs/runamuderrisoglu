@@ -93,7 +93,7 @@ export default function Chapter1() {
         {[
           {
             label: "Where",
-            value: "E & K Arge Engineering, Jun – Jul 2025",
+            value: "E & K Arge Engineering, Jun - Jul 2025",
           },
           {
             label: "Platform",

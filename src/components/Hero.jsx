@@ -44,7 +44,7 @@ export default function Hero({ onExplore }) {
           </p>
 
           <p className="text-slate-500">
-            May 19 – August 7, 2026
+            May 19 - August 7, 2026
           </p>
         </div>
       </div>
