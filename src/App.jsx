@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
+import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 import { projects } from "./data/projects";
@@ -34,6 +35,7 @@ export default function App() {
 
   // PROJECT CASE STUDY
   const CurrentChapter = activeProject.chapters[current].component;
+  const isLastChapter = current === activeProject.chapters.length - 1;
 
   return (
     <div className="min-h-screen bg-slate-50">
@@ -61,6 +63,10 @@ export default function App() {
           >
 
             <CurrentChapter />
+
+            {isLastChapter && (
+              <Footer tagline={activeProject.kicker} />
+            )}
 
           </motion.div>
 

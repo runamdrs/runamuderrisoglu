@@ -76,6 +76,15 @@ export default function Footer({
             LinkedIn
           </a>
 
+          <a
+            href="https://github.com/runamdrs"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full border border-slate-700 px-6 py-3 font-medium transition-all hover:border-blue-500 hover:text-blue-400"
+          >
+            GitHub
+          </a>
+
           <button
             onClick={copyEmail}
             className="rounded-full border border-slate-700 px-6 py-3 font-medium transition-all hover:border-blue-500 hover:text-blue-400"

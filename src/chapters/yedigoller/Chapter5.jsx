@@ -1,5 +1,3 @@
-import Footer from "../../components/Footer";
-
 const reflections = [
   {
     title: "Computer science is not confined to software",
@@ -17,8 +15,7 @@ const reflections = [
 
 export default function Chapter5() {
   return (
-    <>
-      <section className="bg-slate-50 px-8 py-32">
+    <section className="bg-slate-50 px-8 py-32">
         <div className="mx-auto max-w-6xl">
 
           {/* Header */}
@@ -93,9 +90,6 @@ export default function Chapter5() {
           </div>
 
         </div>
-      </section>
-
-      <Footer tagline="Environmental Research Case Study" />
-    </>
+    </section>
   );
 }
