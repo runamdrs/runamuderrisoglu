@@ -1,10 +1,11 @@
-import { chapters } from "../data/chapters";
-
 export default function Sidebar({
+  project,
   current,
   setCurrent,
   onBack,
 }) {
+  const { chapters, eyebrow, title, kicker } = project;
+
   return (
     <aside className="fixed inset-y-0 left-0 z-50 w-72 overflow-y-auto border-r border-slate-200 bg-white">
       <div className="flex min-h-full flex-col p-8">
@@ -24,17 +25,20 @@ export default function Sidebar({
 
         <div className="border-b border-slate-200 pb-8">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600">
-            Talent-Ray · 2026
+            {eyebrow}
           </p>
 
           <h1 className="mt-4 text-2xl font-bold leading-tight text-slate-900">
-            When Code Stops
-            <br />
-            Being the Bottleneck
+            {title.map((line, index) => (
+              <span key={line}>
+                {index > 0 && <br />}
+                {line}
+              </span>
+            ))}
           </h1>
 
           <p className="mt-3 text-sm leading-6 text-slate-500">
-            Software Engineering Internship Case Study
+            {kicker}
           </p>
         </div>
 

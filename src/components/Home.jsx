@@ -30,6 +30,7 @@ const experiences = [
       "Worked with Raspberry Pi, Linux, Python, and Flask to connect sensors to web interfaces.",
       "Used TensorFlow and OpenCV for object detection and image classification projects.",
     ],
+    projectId: "ek-arduino",
   },
   {
     period: "Jul – Aug 2024",
@@ -109,11 +110,33 @@ const projects = [
     tags: ["Artificial Intelligence", "Software Engineering", "Testing"],
   },
 
+  {
+    id: "yedigoller",
+    number: "02",
+    type: "Research • Data Science",
+    year: "2026",
+    title: "Reading a Forest Through Data",
+    description:
+      "A TÜBİTAK-supported study in Yedigöller National Park on how hiking, camping, and picnicking affect the health of Oriental beech trees. I built the statistical workflow in R and the figures for the manuscript.",
+    tags: ["R", "Statistics", "Environmental Research", "Data Visualization"],
+  },
+
+  {
+    id: "ek-arduino",
+    number: "03",
+    type: "Embedded Systems • Electronics",
+    year: "2025",
+    title: "Four Machines on One Microcontroller",
+    description:
+      "My engineering internship at E & K Arge Engineering. I built four interactive systems on an Arduino Leonardo — a car distance sensor with color detection, a plant care monitor, a Bluetooth countdown machine, and a password-protected smart home controller.",
+    tags: ["Arduino", "Embedded Systems", "Sensors", "C/C++"],
+  },
+
   // ADD FUTURE PROJECTS HERE
   //
   // {
   //   id: "robotics-project",
-  //   number: "02",
+  //   number: "03",
   //   type: "Robotics",
   //   year: "2026",
   //   title: "Robotics Project",
@@ -129,7 +152,7 @@ export default function Home({ onOpenProject }) {
 
       {/* HERO */}
 
-      <section className="relative flex min-h-[85vh] items-center overflow-hidden px-8 pb-28">
+      <section className="relative flex min-h-[85vh] items-center overflow-hidden px-8 pb-28 pt-16">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-700/20 via-slate-950 to-slate-950" />
 
         <div className="absolute -left-20 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />

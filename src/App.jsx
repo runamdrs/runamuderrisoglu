@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
-import { chapters } from "./data/chapters";
+import { projects } from "./data/projects";
 
 export default function App() {
   const [project, setProject] = useState(null);
@@ -24,19 +24,22 @@ export default function App() {
   };
 
   // PORTFOLIO HOME
-  if (!project) {
+  const activeProject = project ? projects[project] : null;
+
+  if (!activeProject) {
     return (
       <Home onOpenProject={openProject} />
     );
   }
 
-  // TALENT-RAY PROJECT
-  const CurrentChapter = chapters[current].component;
+  // PROJECT CASE STUDY
+  const CurrentChapter = activeProject.chapters[current].component;
 
   return (
     <div className="min-h-screen bg-slate-50">
 
       <Sidebar
+        project={activeProject}
         current={current}
         setCurrent={setCurrent}
         onBack={closeProject}
