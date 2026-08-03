@@ -50,7 +50,8 @@ const athletics = [
     bullets: [
       "Academic All-America, Second Team: among the top 12 players in the nation when combining academic and athletic performance.",
       "SAC Freshman of the Year, chosen by conference coaches.",
-      "First Team Singles and Doubles (SAC); finished 13th singles player in the Southeast region.",
+      "Three-time All-SAC selection: First Team Singles and Doubles (freshman year), Second Team Singles (sophomore year), First Team Singles and Second Team Doubles (junior year).",
+      "Finished 13th singles player in the Southeast region.",
       "SAC Commissioner's Honor Roll.",
     ],
   },
