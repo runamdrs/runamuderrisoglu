@@ -230,14 +230,14 @@ export default function Home({ onOpenProject }) {
 
             <a
               href="#projects"
-              className="rounded-full bg-blue-600 px-7 py-4 font-semibold transition hover:bg-blue-500"
+              className="w-56 rounded-full bg-blue-600 py-4 text-center font-semibold transition hover:bg-blue-500"
             >
               Explore Projects ↓
             </a>
 
             <a
               href="#links"
-              className="rounded-full border border-slate-700 px-7 py-4 font-semibold text-slate-300 transition hover:border-slate-500 hover:text-white"
+              className="w-56 rounded-full border border-slate-700 py-4 text-center font-semibold text-slate-300 transition hover:border-slate-500 hover:text-white"
             >
               All My Links ↓
             </a>
