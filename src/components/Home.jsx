@@ -48,6 +48,7 @@ const athletics = [
     role: "LR Women's Tennis Team Captain",
     org: "Lenoir-Rhyne University",
     bullets: [
+      "Team member since Aug 2023, serving as captain since Aug 2024.",
       "Academic All-America, Second Team: among the top 12 players in the nation when combining academic and athletic performance.",
       "SAC Freshman of the Year, chosen by conference coaches.",
       "Three-time All-SAC selection: First Team Singles and Doubles (freshman year), Second Team Singles (sophomore year), First Team Singles and Second Team Doubles (junior year).",
