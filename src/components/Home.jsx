@@ -49,7 +49,11 @@ const athletics = [
     org: "Lenoir-Rhyne University",
     bullets: [
       "Team member since Aug 2023, serving as captain since Aug 2024.",
-      "Academic All-America, Second Team: among the top 12 players in the nation when combining academic and athletic performance.",
+      {
+        text: "CSC Academic All-America, Second Team: the first player in LR Women's Tennis history to earn the honor, and among the top 12 players in the nation when combining academic and athletic performance.",
+        href: "https://lrbears.com/news/2026/6/2/runa-muderrisoglu-becomes-the-first-csc-academic-all-american-in-lr-womens-tennis-history.aspx",
+        linkText: "Read the announcement",
+      },
       "SAC Freshman of the Year, chosen by conference coaches.",
       "Three-time All-SAC selection: First Team Singles and Doubles (freshman year), Second Team Singles (sophomore year), First Team Singles and Second Team Doubles (junior year).",
       "Finished 13th singles player in the Southeast region.",
@@ -218,7 +222,8 @@ export default function Home({ onOpenProject }) {
           <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-slate-400">
             Computer Science major with an Engineering Physics minor at
             Lenoir-Rhyne University. 4.0 GPA, captain of the LR Women's
-            Tennis Team, and Academic All-America honoree. Interested in Artificial
+            Tennis Team, and the first Academic All-American in LR Women's
+            Tennis history. Interested in Artificial
             Intelligence, Robotics, and Biomedical Engineering.
           </p>
 
@@ -373,9 +378,23 @@ export default function Home({ onOpenProject }) {
                 </p>
 
                 <ul className="mt-6 space-y-3 text-lg leading-8 text-slate-400">
-                  {item.bullets.map((bullet) => (
-                    <li key={bullet}>• {bullet}</li>
-                  ))}
+                  {item.bullets.map((bullet) =>
+                    typeof bullet === "string" ? (
+                      <li key={bullet}>• {bullet}</li>
+                    ) : (
+                      <li key={bullet.text}>
+                        • {bullet.text}{" "}
+                        <a
+                          href={bullet.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-blue-400 underline decoration-blue-400/40 underline-offset-4 transition hover:text-blue-300"
+                        >
+                          {bullet.linkText}
+                        </a>
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
             </div>
