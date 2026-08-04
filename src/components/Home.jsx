@@ -34,7 +34,7 @@ const experiences = [
   },
   {
     period: "Jul - Aug 2024",
-    role: "Chocolate Engineer",
+    role: "Product Assistant",
     org: "ZD Chocolates",
     bullets: [
       "Assisted in producing and selling handcrafted chocolates, from tempering and fillings to customer communication.",
@@ -56,7 +56,6 @@ const athletics = [
       },
       "SAC Freshman of the Year, chosen by conference coaches.",
       "Three-time All-SAC selection: First Team Singles and Doubles (freshman year), Second Team Singles (sophomore year), First Team Singles and Second Team Doubles (junior year).",
-      "Finished 13th singles player in the Southeast region.",
       "SAC Commissioner's Honor Roll.",
     ],
   },
