@@ -19,7 +19,7 @@ export default function Footer({
   };
 
   return (
-    <footer className="bg-slate-950 px-8 py-20 text-white">
+    <footer id="links" className="bg-slate-950 px-8 py-20 text-white">
       <div className="mx-auto flex max-w-7xl flex-col items-center text-center">
 
         <h2 className="text-3xl font-bold">

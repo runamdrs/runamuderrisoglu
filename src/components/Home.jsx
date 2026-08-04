@@ -236,12 +236,10 @@ export default function Home({ onOpenProject }) {
             </a>
 
             <a
-              href="https://www.linkedin.com/in/runa-muderrisoglu/"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#links"
               className="rounded-full border border-slate-700 px-7 py-4 font-semibold text-slate-300 transition hover:border-slate-500 hover:text-white"
             >
-              LinkedIn
+              All My Links ↓
             </a>
 
           </div>
