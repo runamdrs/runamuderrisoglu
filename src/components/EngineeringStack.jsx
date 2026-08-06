@@ -51,7 +51,7 @@ const stack = [
 
 export default function EngineeringStack() {
   return (
-    <section className="bg-white py-28">
+    <section className="bg-white py-10">
       <div className="mx-auto max-w-7xl px-8">
 
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">

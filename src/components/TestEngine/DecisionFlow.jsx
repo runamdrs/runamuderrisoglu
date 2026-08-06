@@ -8,7 +8,7 @@ function Box({ children }) {
 
 export default function DecisionFlow() {
   return (
-    <section className="px-8 py-24">
+    <section className="px-8 py-10">
       <div className="mx-auto max-w-6xl">
 
         <h2 className="mb-20 text-center text-4xl font-bold text-white">

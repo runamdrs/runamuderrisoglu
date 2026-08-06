@@ -1,6 +1,6 @@
 export default function Impact() {
   return (
-    <section className="px-8 py-32">
+    <section className="px-8 py-14">
       <div className="mx-auto max-w-7xl">
 
         <div className="text-center">

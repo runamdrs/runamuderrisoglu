@@ -33,7 +33,7 @@ const contributions = [
 
 export default function EngineeringContributions() {
   return (
-    <section className="bg-slate-50 py-28">
+    <section className="bg-slate-50 py-10">
       <div className="mx-auto max-w-7xl px-8">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-blue-600">
           Engineering Contributions

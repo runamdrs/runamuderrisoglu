@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="px-8 py-36">
+    <section className="px-8 py-14">
       <div className="mx-auto max-w-7xl">
 
         <p className="mb-6 text-sm font-semibold uppercase tracking-[0.35em] text-blue-400">

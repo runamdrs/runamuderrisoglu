@@ -1,6 +1,6 @@
 export default function EngineeringChallenge() {
   return (
-    <section className="bg-white py-28">
+    <section className="bg-white py-10">
 
       <div className="mx-auto max-w-7xl px-8">
 

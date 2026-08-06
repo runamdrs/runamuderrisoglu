@@ -28,7 +28,7 @@ const contributions = [
 
 export default function MyContribution() {
   return (
-    <section className="px-8 py-28">
+    <section className="px-8 py-10">
       <div className="mx-auto max-w-6xl">
 
         <div className="mb-20">

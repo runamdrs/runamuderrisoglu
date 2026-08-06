@@ -1,6 +1,6 @@
 export default function ExecutiveSummary() {
   return (
-    <section className="bg-white py-24">
+    <section className="bg-white py-10">
       <div className="mx-auto max-w-6xl px-8">
 
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-blue-600">

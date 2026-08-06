@@ -5,9 +5,9 @@ export default function ChapterLayout({
   children,
 }) {
   return (
-    <section className="min-h-screen bg-white">
+    <section className="bg-white">
 
-      <div className="mx-auto max-w-7xl px-6 py-16 md:px-16 md:py-20">
+      <div className="mx-auto max-w-7xl px-6 py-10 md:px-16 md:py-12">
 
         <p className="text-sm font-semibold uppercase tracking-[0.4em] text-blue-600">
           Chapter {number}
@@ -21,7 +21,7 @@ export default function ChapterLayout({
           {subtitle}
         </p>
 
-        <div className="mt-20">
+        <div className="mt-10">
           {children}
         </div>
 
