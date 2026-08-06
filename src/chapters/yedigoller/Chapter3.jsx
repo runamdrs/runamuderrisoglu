@@ -78,7 +78,7 @@ export default function Chapter3() {
             {contributions.map((item, index) => (
               <div
                 key={item.title}
-                className="grid gap-8 border-b border-slate-700 pb-10 md:grid-cols-[80px_1fr]"
+                className="grid gap-8 border-b border-slate-700 pb-10 lg:grid-cols-[80px_1fr]"
               >
                 <div className="text-4xl font-bold text-blue-400">
                   {String(index + 1).padStart(2, "0")}

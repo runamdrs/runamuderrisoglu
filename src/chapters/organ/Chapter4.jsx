@@ -128,7 +128,7 @@ export default function Chapter4() {
           trained on.
         </p>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {guards.map((guard) => (
             <div
               key={guard.name}

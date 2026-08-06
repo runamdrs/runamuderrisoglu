@@ -6,20 +6,37 @@ import Home from "./components/Home";
 import Sidebar from "./components/Sidebar";
 import { projects } from "./data/projects";
 
+// Read the project id from the URL path, e.g. /talent-ray -> "talent-ray".
+const projectFromPath = () => {
+  const id = window.location.pathname.replace(/^\/+|\/+$/g, "");
+  return projects[id] ? id : null;
+};
+
 export default function App() {
-  const [project, setProject] = useState(null);
+  const [project, setProject] = useState(projectFromPath);
   const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const onPopState = () => {
+      setProject(projectFromPath());
+      setCurrent(0);
+    };
+    window.addEventListener("popstate", onPopState);
+    return () => window.removeEventListener("popstate", onPopState);
+  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [project, current]);
 
   const openProject = (projectId) => {
+    window.history.pushState(null, "", `/${projectId}`);
     setProject(projectId);
     setCurrent(0);
   };
 
   const closeProject = () => {
+    window.history.pushState(null, "", "/");
     setProject(null);
     setCurrent(0);
   };
@@ -47,7 +64,7 @@ export default function App() {
         onBack={closeProject}
       />
 
-      <main className="ml-72 min-h-screen">
+      <main className="min-h-screen md:ml-72">
 
         <AnimatePresence mode="wait">
 

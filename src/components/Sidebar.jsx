@@ -7,7 +7,7 @@ export default function Sidebar({
   const { chapters, eyebrow, title, kicker } = project;
 
   return (
-    <aside className="fixed inset-y-0 left-0 z-50 w-72 overflow-y-auto border-r border-slate-200 bg-white">
+    <aside className="border-b border-slate-200 bg-white md:fixed md:inset-y-0 md:left-0 md:z-50 md:w-72 md:overflow-y-auto md:border-b-0 md:border-r">
       <div className="flex min-h-full flex-col p-8">
 
         {/* BACK TO PORTFOLIO */}

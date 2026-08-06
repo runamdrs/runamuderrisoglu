@@ -42,7 +42,7 @@ export default function Results() {
             </p>
           </div>
 
-          <div className="mt-24 grid gap-8 md:grid-cols-3">
+          <div className="mt-24 grid gap-8 lg:grid-cols-3">
             {highlights.map((item) => (
               <div
                 key={item.title}

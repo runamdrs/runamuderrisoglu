@@ -53,7 +53,7 @@ export default function Chapter2() {
           Three Kinds of Pressure
         </h2>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 lg:grid-cols-3">
 
           {useTypes.map((use) => (
             <div

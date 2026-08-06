@@ -112,7 +112,7 @@ export default function Chapter2() {
           {factors.map((factor) => (
             <div
               key={factor.name}
-              className="grid gap-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm md:grid-cols-[200px_100px_1fr]"
+              className="grid gap-6 rounded-3xl border border-slate-200 bg-white p-8 shadow-sm lg:grid-cols-[200px_100px_1fr]"
             >
               <p className="text-lg font-semibold text-slate-900">
                 {factor.name}

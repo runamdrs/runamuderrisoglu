@@ -7,13 +7,13 @@ export default function ChapterLayout({
   return (
     <section className="min-h-screen bg-white">
 
-      <div className="mx-auto max-w-7xl px-16 py-20">
+      <div className="mx-auto max-w-7xl px-6 py-16 md:px-16 md:py-20">
 
         <p className="text-sm font-semibold uppercase tracking-[0.4em] text-blue-600">
           Chapter {number}
         </p>
 
-        <h1 className="mt-4 text-6xl font-bold text-slate-900">
+        <h1 className="mt-4 text-4xl font-bold text-slate-900 md:text-6xl">
           {title}
         </h1>
 

@@ -30,7 +30,7 @@ export default function Capabilities() {
           Core Responsibilities
         </h2>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 lg:grid-cols-2 xl:grid-cols-4">
 
           {capabilities.map((item) => (
             <div

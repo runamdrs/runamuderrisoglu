@@ -50,7 +50,7 @@ export default function EngineeringContributions() {
           hands-on validation and prompt work.
         </p>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-16 grid gap-8 lg:grid-cols-2 xl:grid-cols-3">
           {contributions.map((item) => (
             <div
               key={item.title}

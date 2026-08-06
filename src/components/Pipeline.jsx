@@ -36,7 +36,7 @@ export default function Pipeline() {
           trusted.
         </p>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
+        <div className="mt-16 grid gap-8 lg:grid-cols-3">
           {phases.map((phase) => (
             <div
               key={phase.title}
@@ -64,7 +64,7 @@ export default function Pipeline() {
             moved on.
           </p>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-4">
+          <div className="mt-12 grid gap-6 lg:grid-cols-4">
             {[
               {
                 step: "01",
