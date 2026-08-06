@@ -1,4 +1,61 @@
+/* Computer Modern: the typeface LaTeX documents are set in */
+@import url("https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css");
 @import "tailwindcss";
+
+@theme {
+  /*
+   * LaTeX paper theme.
+   * The existing components use slate + blue utility classes, so the
+   * palette is remapped at the token level: slate becomes warm ink
+   * grays, blue becomes academic burgundy, white becomes paper.
+   */
+  --font-sans: "Computer Modern Serif", "Latin Modern Roman", Georgia,
+    "Times New Roman", serif;
+  --font-mono: "Computer Modern Typewriter", ui-monospace, "Courier New",
+    monospace;
+
+  /* Paper */
+  --color-white: #fdfcf7;
+
+  /* Warm ink grays (slate remap) */
+  --color-slate-50: #f7f4ec;
+  --color-slate-100: #efebe0;
+  --color-slate-200: #e1dccc;
+  --color-slate-300: #c8c2ae;
+  --color-slate-400: #a29b86;
+  --color-slate-500: #7f7864;
+  --color-slate-600: #645e50;
+  --color-slate-700: #4e4a3f;
+  --color-slate-800: #37332c;
+  --color-slate-900: #23211c;
+  --color-slate-950: #171511;
+
+  /* Academic burgundy (blue remap) */
+  --color-blue-50: #faf2f1;
+  --color-blue-100: #f3e0de;
+  --color-blue-200: #e5c1be;
+  --color-blue-300: #d09a95;
+  --color-blue-400: #b2685f;
+  --color-blue-500: #99473e;
+  --color-blue-600: #7c2d26;
+  --color-blue-700: #672521;
+  --color-blue-800: #531f1c;
+  --color-blue-900: #421a17;
+  --color-blue-950: #2a0f0d;
+
+  /* Muted gold (cyan remap, decorative glows only) */
+  --color-cyan-400: #c2a24b;
+
+  /* Scholarly gold, dark enough for text on paper */
+  --color-gold-500: #9a7b23;
+  --color-gold-600: #8a6d1f;
+  --color-gold-700: #71591a;
+
+  /* Crisper, more print-like corners */
+  --radius-xl: 0.25rem;
+  --radius-2xl: 0.25rem;
+  --radius-3xl: 0.375rem;
+}
 
 html {
   scroll-behavior: smooth;
@@ -6,9 +63,12 @@ html {
 
 body {
   margin: 0;
-  font-family: Inter, system-ui, sans-serif;
-  background: #f8fafc;
-  color: #111827;
+  font-family: "Computer Modern Serif", "Latin Modern Roman", Georgia,
+    "Times New Roman", serif;
+  background: #fdfcf7;
+  color: #23211c;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga", "kern";
 }
 
 * {

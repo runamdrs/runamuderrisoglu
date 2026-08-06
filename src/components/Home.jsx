@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Footer from "./Footer";
 
 const experiences = [
@@ -189,55 +191,162 @@ const projects = [
   // },
 ];
 
+function Section({ number, title, description, id, tinted, children }) {
+  const [open, setOpen] = useState(true);
+
+  return (
+    <section
+      id={id}
+      className={`px-6 py-12 md:px-10 ${
+        tinted ? "border-y border-slate-200 bg-slate-50" : ""
+      }`}
+    >
+      <div className="mx-auto max-w-6xl">
+
+        {/* Section header, click to fold like a ToC entry */}
+
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          aria-expanded={open}
+          className="group w-full border-t-2 border-slate-900 pt-6 text-left"
+        >
+          <div className="flex items-start justify-between gap-6">
+
+            <div>
+              <h2 className="flex items-baseline gap-4 text-4xl font-bold text-slate-900">
+                <span className="text-blue-600">{number}</span>
+                <span>{title}</span>
+              </h2>
+
+              <p className="mt-3 text-lg italic leading-8 text-gold-600">
+                {description}
+              </p>
+            </div>
+
+            <span className="pt-2 font-mono text-xl text-slate-400 transition group-hover:text-blue-600">
+              {open ? "[-]" : "[+]"}
+            </span>
+
+          </div>
+        </button>
+
+        {open && <div>{children}</div>}
+
+      </div>
+    </section>
+  );
+}
+
+function EntryList({ entries, onOpenProject }) {
+  return entries.map((entry) => (
+    <div
+      key={entry.role + entry.org}
+      className="mt-12 grid gap-4 border-t border-slate-200 pt-10 md:grid-cols-[190px_1fr] md:gap-10"
+    >
+      <div className="text-lg italic text-slate-500">
+        {entry.period}
+      </div>
+
+      <div>
+        <h3 className="text-2xl font-bold text-slate-900">
+          {entry.role}
+        </h3>
+
+        <p className="mt-1 text-lg italic text-blue-600">
+          {entry.org}
+        </p>
+
+        <ul className="mt-5 list-disc space-y-2.5 pl-5 text-lg leading-8 text-slate-700 marker:text-slate-400">
+          {entry.bullets.map((bullet) =>
+            typeof bullet === "string" ? (
+              <li key={bullet}>{bullet}</li>
+            ) : (
+              <li key={bullet.text}>
+                {bullet.text}{" "}
+                <a
+                  href={bullet.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-blue-600 underline decoration-blue-600/40 underline-offset-4 transition hover:text-blue-500"
+                >
+                  {bullet.linkText}
+                </a>
+              </li>
+            )
+          )}
+        </ul>
+
+        {entry.projectId && onOpenProject && (
+          <button
+            onClick={() => onOpenProject(entry.projectId)}
+            className="mt-6 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 transition hover:text-blue-600"
+          >
+            Read the case study →
+          </button>
+        )}
+      </div>
+    </div>
+  ));
+}
+
 export default function Home({ onOpenProject }) {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
+    <main className="min-h-screen bg-white text-slate-900">
 
-      {/* HERO */}
+      {/* TITLE PAGE */}
 
-      <section className="relative flex min-h-[85vh] items-center overflow-hidden px-8 pb-28 pt-16">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-700/20 via-slate-950 to-slate-950" />
+      <section className="px-6 md:px-10 pb-16 pt-10 md:pt-12">
+        <div className="mx-auto max-w-6xl text-center">
 
-        <div className="absolute -left-20 top-20 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
-
-        <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-cyan-400/10 blur-3xl" />
-
-        <div className="relative z-10 mx-auto w-full max-w-7xl text-center">
-
-          <p className="text-sm font-semibold tracking-[0.35em] text-blue-400">
-            RUNA MÜDERRİSOĞLU
-          </p>
-
-          <h1 className="mx-auto mt-8 max-w-5xl text-6xl font-bold leading-[1.05] md:text-8xl">
-            Building intelligent
-            <br />
-            systems through
-            <br />
-            <span className="text-blue-400">
-              software & engineering.
-            </span>
+          <h1 className="mx-auto max-w-6xl text-5xl font-bold leading-[1.13] text-slate-900 md:text-7xl">
+            Building Intelligent Systems through{" "}
+            <span className="text-blue-600">Software &amp; Engineering</span>
           </h1>
 
-          <p className="mx-auto mt-10 max-w-2xl text-xl leading-9 text-slate-400">
-            Computer Science major with an Engineering Physics minor at
-            Lenoir-Rhyne University. 4.0 GPA, captain of the LR Women's
-            Tennis Team, and the first Academic All-American in LR Women's
-            Tennis history. Interested in Artificial
-            Intelligence, Robotics, and Biomedical Engineering.
+          <p className="mt-10 text-2xl text-slate-900">
+            Runa Müderrisoğlu
           </p>
 
-          <div className="mt-12 flex items-center justify-center gap-6">
+          <p className="mt-2 text-lg italic text-slate-600">
+            Lenoir-Rhyne University
+          </p>
+
+          <p className="mt-1 text-lg italic text-slate-500">
+            August 2026
+          </p>
+
+
+          {/* ABSTRACT */}
+
+          <div className="mx-auto mt-14 max-w-4xl">
+
+            <p className="text-sm font-bold uppercase tracking-[0.3em] text-blue-600">
+              Abstract
+            </p>
+
+            <p className="mt-5 text-justify text-lg leading-8 text-slate-700 [hyphens:auto]">
+              Computer Science major with an Engineering Physics minor at
+              Lenoir-Rhyne University. 4.0 GPA, captain of the LR Women's
+              Tennis Team, and the first Academic All-American in LR Women's
+              Tennis history. Interested in Artificial Intelligence,
+              Robotics, and Biomedical Engineering.
+            </p>
+
+          </div>
+
+          <div className="mt-12 flex flex-wrap items-center justify-center gap-5">
 
             <a
               href="#projects"
-              className="w-56 rounded-full bg-blue-600 py-4 text-center font-semibold transition hover:bg-blue-500"
+              className="w-64 whitespace-nowrap rounded-sm border border-blue-600 bg-blue-600 py-3.5 text-center text-sm font-semibold uppercase tracking-[0.15em] text-white transition hover:border-blue-700 hover:bg-blue-700"
             >
               Explore Projects ↓
             </a>
 
             <a
               href="#links"
-              className="w-56 rounded-full border border-slate-700 py-4 text-center font-semibold text-slate-300 transition hover:border-slate-500 hover:text-white"
+              className="w-64 whitespace-nowrap rounded-sm border border-slate-300 py-3.5 text-center text-sm font-semibold uppercase tracking-[0.15em] text-slate-700 transition hover:border-blue-600 hover:text-blue-600"
             >
               All My Links ↓
             </a>
@@ -248,188 +357,84 @@ export default function Home({ onOpenProject }) {
       </section>
 
 
-      {/* EXPERIENCE */}
+      {/* 1. EXPERIENCE */}
 
-      <section className="border-t border-slate-800 px-8 py-28">
-        <div className="mx-auto max-w-7xl">
-
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-            Experience
-          </p>
-
-          <h2 className="mt-5 text-5xl font-bold">
-            Where I've worked
-          </h2>
-
-          {experiences.map((job) => (
-            <div
-              key={job.role + job.org}
-              className="mt-16 grid gap-8 border-t border-slate-800 pt-12 md:grid-cols-[220px_1fr]"
-            >
-              <div className="text-slate-500">
-                {job.period}
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-semibold">
-                  {job.role}
-                </h3>
-
-                <p className="mt-2 text-lg text-blue-400">
-                  {job.org}
-                </p>
-
-                <ul className="mt-6 space-y-3 text-lg leading-8 text-slate-400">
-                  {job.bullets.map((bullet) => (
-                    <li key={bullet}>• {bullet}</li>
-                  ))}
-                </ul>
-
-                {job.projectId && (
-                  <button
-                    onClick={() => onOpenProject(job.projectId)}
-                    className="mt-8 text-sm font-semibold text-slate-400 transition hover:text-blue-400"
-                  >
-                    Read the case study →
-                  </button>
-                )}
-              </div>
-            </div>
-          ))}
-
-        </div>
-      </section>
+      <Section
+        number="1"
+        title="Experience"
+        description="Internships and work, from AI testing systems to electronics benches."
+      >
+        <EntryList entries={experiences} onOpenProject={onOpenProject} />
+      </Section>
 
 
-      {/* EDUCATION */}
+      {/* 2. EDUCATION */}
 
-      <section className="border-t border-slate-800 px-8 py-28">
-        <div className="mx-auto max-w-7xl">
-
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-            Education
-          </p>
-
-          <h2 className="mt-5 text-5xl font-bold">
-            Where I study
-          </h2>
-
-          <div className="mt-16 grid gap-8 border-t border-slate-800 pt-12 md:grid-cols-[220px_1fr]">
-
-            <div className="text-slate-500">
-              Aug 2023 - Present
-            </div>
-
-            <div>
-              <h3 className="text-3xl font-semibold">
-                Lenoir-Rhyne University
-              </h3>
-
-              <p className="mt-2 text-lg text-blue-400">
-                B.S. Computer Science • Minor in Engineering Physics • GPA: 4.0
-              </p>
-
-              <ul className="mt-6 space-y-3 text-lg leading-8 text-slate-400">
-                <li>• Vice President, Upsilon Pi Epsilon Honor Society</li>
-                <li>• Computer Programming Award</li>
-                <li>• Engineering Physics Achievement Award</li>
-                <li>• President's List</li>
-              </ul>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
+      <Section
+        number="2"
+        title="Education"
+        description="My degree, honors, and awards at Lenoir-Rhyne University."
+        tinted
+      >
+        <EntryList
+          entries={[
+            {
+              period: "Aug 2023 - Present",
+              role: "Lenoir-Rhyne University",
+              org: "B.S. Computer Science • Minor in Engineering Physics • GPA: 4.0",
+              bullets: [
+                "Vice President, Upsilon Pi Epsilon Honor Society",
+                "Computer Programming Award",
+                "Engineering Physics Achievement Award",
+                "President's List",
+              ],
+            },
+          ]}
+        />
+      </Section>
 
 
-      {/* ATHLETICS & LEADERSHIP */}
+      {/* 3. ATHLETICS & LEADERSHIP */}
 
-      <section className="border-t border-slate-800 px-8 py-28">
-        <div className="mx-auto max-w-7xl">
-
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-            Athletics & Leadership
-          </p>
-
-          <h2 className="mt-5 text-5xl font-bold">
-            On and off the court
-          </h2>
-
-          {athletics.map((item) => (
-            <div
-              key={item.role}
-              className="mt-16 grid gap-8 border-t border-slate-800 pt-12 md:grid-cols-[220px_1fr]"
-            >
-              <div className="text-slate-500">
-                {item.period}
-              </div>
-
-              <div>
-                <h3 className="text-3xl font-semibold">
-                  {item.role}
-                </h3>
-
-                <p className="mt-2 text-lg text-blue-400">
-                  {item.org}
-                </p>
-
-                <ul className="mt-6 space-y-3 text-lg leading-8 text-slate-400">
-                  {item.bullets.map((bullet) =>
-                    typeof bullet === "string" ? (
-                      <li key={bullet}>• {bullet}</li>
-                    ) : (
-                      <li key={bullet.text}>
-                        • {bullet.text}{" "}
-                        <a
-                          href={bullet.href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="text-blue-400 underline decoration-blue-400/40 underline-offset-4 transition hover:text-blue-300"
-                        >
-                          {bullet.linkText}
-                        </a>
-                      </li>
-                    )
-                  )}
-                </ul>
-              </div>
-            </div>
-          ))}
-
-        </div>
-      </section>
+      <Section
+        number="3"
+        title="Athletics & Leadership"
+        description="Tennis at the NCAA Division II level, and the honors that came with it."
+      >
+        <EntryList entries={athletics} />
+      </Section>
 
 
-      {/* SKILLS */}
+      {/* 4. SKILLS */}
 
-      <section className="border-t border-slate-800 px-8 py-28">
-        <div className="mx-auto max-w-7xl">
+      <Section
+        number="4"
+        title="Skills"
+        description="The languages, tools, and strengths I bring to a project."
+        tinted
+      >
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-            Skills
-          </p>
-
-          <h2 className="mt-5 text-5xl font-bold">
-            What I work with
-          </h2>
-
-          <div className="mt-16 grid gap-6 md:grid-cols-2 xl:grid-cols-5">
-
-            {skills.map((skill) => (
+            {[
+              ...skills,
+              {
+                group: "Languages",
+                items: ["Turkish (Native)", "English (Fluent)"],
+              },
+            ].map((skill) => (
               <div
                 key={skill.group}
-                className="rounded-3xl border border-slate-800 bg-slate-900/50 p-6"
+                className="rounded-sm border border-slate-200 bg-white p-6"
               >
-                <h3 className="text-sm font-semibold uppercase tracking-widest text-slate-500">
+                <h3 className="border-b border-slate-200 pb-3 text-sm font-bold uppercase tracking-[0.2em] text-blue-600">
                   {skill.group}
                 </h3>
 
-                <div className="mt-6 flex flex-wrap gap-2">
+                <div className="mt-5 flex flex-wrap gap-2">
                   {skill.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-slate-700 px-3 py-1.5 text-sm text-slate-300"
+                      className="rounded-sm border border-slate-300 bg-slate-50 px-3 py-1.5 text-sm text-slate-700"
                     >
                       {item}
                     </span>
@@ -438,59 +443,35 @@ export default function Home({ onOpenProject }) {
               </div>
             ))}
 
-          </div>
-
-          <p className="mt-10 text-slate-500">
-            Languages: Turkish (Native) • English (Fluent)
-          </p>
-
         </div>
-      </section>
+      </Section>
 
 
-      {/* PROJECTS */}
+      {/* 5. SELECTED PROJECTS */}
 
-      <section
+      <Section
+        number="5"
+        title="Selected Projects"
         id="projects"
-        className="border-t border-slate-800 bg-slate-950 px-8 py-32"
+        description="Case studies across software engineering, AI, research, and electronics. Select one to explore the work in detail."
       >
-        <div className="mx-auto max-w-7xl">
 
-          <div className="mb-20">
+        {/* PROJECT LIST, set like a reference list */}
 
-            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-400">
-              Selected Work
-            </p>
+        <div className="mt-10 border-t border-slate-200">
 
-            <h2 className="mt-5 text-5xl font-bold md:text-6xl">
-              Projects
-            </h2>
-
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">
-              A collection of projects across software engineering,
-              artificial intelligence, robotics, research, and engineering.
-              Select a project to explore the work in detail.
-            </p>
-
-          </div>
-
-
-          {/* PROJECT LIST */}
-
-          <div className="border-t border-slate-800">
-
-            {projects.map((project) => (
+            {projects.map((project, index) => (
 
               <button
                 key={project.id}
                 onClick={() => onOpenProject(project.id)}
-                className="group grid w-full gap-8 border-b border-slate-800 py-12 text-left transition-all hover:bg-slate-900/50 md:grid-cols-[80px_1fr_180px]"
+                className="group grid w-full gap-6 border-b border-slate-200 py-10 text-left transition-colors hover:bg-slate-50 md:grid-cols-[64px_1fr]"
               >
 
-                {/* Number */}
+                {/* Citation-style number */}
 
-                <div className="text-sm font-medium text-slate-600">
-                  {project.number}
+                <div className="pt-1 text-lg text-blue-600">
+                  [{index + 1}]
                 </div>
 
 
@@ -498,49 +479,36 @@ export default function Home({ onOpenProject }) {
 
                 <div>
 
-                  <div className="flex flex-wrap items-center gap-3 text-sm text-blue-400">
+                  <div className="flex flex-wrap items-center gap-3 text-sm font-semibold uppercase tracking-[0.15em] text-gold-600">
                     <span>{project.type}</span>
 
-                    <span className="text-slate-700">•</span>
+                    <span className="text-slate-300">•</span>
 
-                    <span className="text-slate-500">
-                      {project.year}
-                    </span>
+                    <span>{project.year}</span>
                   </div>
 
-                  <h3 className="mt-4 text-3xl font-semibold transition group-hover:text-blue-400 md:text-4xl">
+                  <h3 className="mt-3 text-2xl font-bold text-slate-900 transition group-hover:text-blue-600 md:text-3xl">
                     {project.title}
                   </h3>
 
-                  <p className="mt-5 max-w-3xl text-lg leading-8 text-slate-400">
+                  <p className="mt-4 text-justify text-lg leading-8 text-slate-700 [hyphens:auto]">
                     {project.description}
                   </p>
 
-                  <div className="mt-6 flex flex-wrap gap-2">
-
+                  <div className="mt-5 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-
                       <span
                         key={tag}
-                        className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-400"
+                        className="rounded-sm border border-slate-300 bg-white px-3 py-1 text-sm text-slate-600"
                       >
                         {tag}
                       </span>
-
                     ))}
-
                   </div>
 
-                </div>
-
-
-                {/* CTA */}
-
-                <div className="flex items-center justify-start md:justify-end">
-
-                  <span className="text-sm font-semibold text-slate-400 transition-all group-hover:translate-x-2 group-hover:text-blue-400">
+                  <p className="mt-5 text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 transition group-hover:text-blue-600">
                     View Project →
-                  </span>
+                  </p>
 
                 </div>
 
@@ -548,17 +516,14 @@ export default function Home({ onOpenProject }) {
 
             ))}
 
-          </div>
-
         </div>
-      </section>
+
+      </Section>
 
 
       {/* FOOTER */}
 
-      <div className="border-t border-slate-800">
-        <Footer tagline="Computer Science • AI • Robotics • Engineering" />
-      </div>
+      <Footer tagline="Computer Science • AI • Robotics • Engineering" />
 
     </main>
   );
